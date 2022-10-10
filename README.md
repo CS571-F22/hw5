@@ -39,6 +39,9 @@ All routes are relative to `https://www.coletnelson.us/cs571/f22/hw5/api/`
 
 In `BadgerChatroom.js`, the logic to retrieve `messages` has already been completed for you. Display these messages using the `BadgerMessage` component, which takes three props: `title`, `poster`, and `content`. Don't forget to specify a unique `key`!
 
+!["Display"](figures/display.png)
+
+
 ### 2. Memoize `BadgerMessage`
 
 Recall the four criteria for using `memo` (Lecture 04, Slide 31)...
@@ -72,6 +75,9 @@ setAuthToken(YOUR_FETCHED_JWT)
 
 **Note:** For a more fluid user experience, you can use react-router's [useNavigate]("https://www.geeksforgeeks.org/reactjs-usenavigate-hook/") hook to redirect the user to the home page after a successful registration. This is just a suggestion, not a requirement!
 
+!["Register"](figures/register.png)
+
+
 ### 4. Allow Login
 
 In `BadgerLogin.js`, create a form using **uncontrolled input components** that allows a user to enter their username and password. Upon clicking a "Login" button, a `POST` should be performed to authenticate the user via the API.
@@ -95,6 +101,9 @@ setAuthToken(YOUR_FETCHED_JWT)
 
 **Note:** For a more fluid user experience, you can use react-router's [useNavigate]("https://www.geeksforgeeks.org/reactjs-usenavigate-hook/") hook to redirect the user to the home page after a successful login. This is just a suggestion, not a requirement!
 
+!["Login"](figures/login.png)
+
+
 ### 5. Create Posts
 
 In `BadgerChatroom.js`, allow an authenticated user to create posts. If the user is not yet authenticated (i.e. if the user does not have an `authToken` yet), display a message that says "You must be logged in to post!" Otherwise, the user should be able to make a post through a form with a post title, post content, and create post button. You may choose whether you want to use **controlled** or **uncontrolled** input components. Note that whether or not a user is authenticated, they should be able to see the most recent messages for their chatroom.
@@ -109,6 +118,8 @@ You do not need to handle any other user input failures.
 Don't forget this is an authenticated endpoint! It requires a valid `Authorization: Bearer :JWT` header where `:JWT` is the provided `authToken`.
 
 
+!["Create"](figures/create.png)
+
 ### 6. (Optional, Extra Credit) Delete Posts
 
 For 0.5 points of extra credit, add the option for a user to delete their posts. A red "Delete" button should be shown for each post that a user owns but not for other posts. How you choose to implement this is up to you (e.g. you made need to modify the `BadgerAuthContext` to store the `username` as well as the `authToken`, or create a seperate `BadgerUserContext`).
@@ -118,6 +129,8 @@ For 0.5 points of extra credit, add the option for a user to delete their posts.
 Don't forget this is an authenticated endpoint! It requires a valid `Authorization: Bearer :JWT` header where `:JWT` is the provided `authToken`.
 
 **Warning:** This task is more cumbersome than it may seem, make sure you have time and a plan before beginning it!
+
+!["Delete"](figures/delete.png)
 
 ___
 
